@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sudhanshu Gandhi — AI & ML Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="Portfolio of Sudhanshu Gandhi — MCA (AIML) student building ML, NLP and real-time systems." />
+  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <style>
+    /* Subtle animated gradient for headings */
+    .glow-gradient{background:linear-gradient(90deg,#7c3aed,#06b6d4,#8b5cf6);background-size:200% 200%;animation:glow 6s linear infinite;-webkit-background-clip:text;background-clip:text;color:transparent}
+    @keyframes glow{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+    .code-bg{background:#0b1220;color:#cbd5e1;font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Helvetica Neue", monospace}
+    /* small utilities */
+    .no-select { -webkit-user-select:none; -ms-user-select:none; user-select:none; }
+  </style>
+</head>
+<body class="bg-slate-900 text-slate-100 leading-relaxed">
+  <header class="sticky top-0 z-50 backdrop-blur bg-slate-900/60 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center font-bold text-slate-900">SG</div>
+        <div class="hidden sm:block">
+          <div class="font-semibold">Sudhanshu Gandhi</div>
+          <div class="text-xs text-slate-400">MCA (AIML) • AI · ML · NLP</div>
+        </div>
+      </a>
+
+      <!-- Navigation (desktop) -->
+      <nav id="mainNav" class="hidden md:flex items-center gap-6 text-sm text-slate-300 font-medium">
+        <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+        <a href="#skills" class="hover:text-indigo-400 transition-colors">Skills</a>
+        <a href="#certificates" class="hover:text-indigo-400 transition-colors">Certificates</a>
+        <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+        <a href="/resume.pdf" class="ml-4 inline-flex items-center gap-2 px-4 py-1.5 rounded-lg bg-indigo-600/10 text-indigo-400 border border-indigo-500/30 hover:bg-indigo-600 hover:text-white transition-all">Resume</a>
+      </nav>
+
+      <!-- Mobile menu button -->
+      <button id="mobileBtn" aria-expanded="false" aria-controls="mobileMenu" class="md:hidden text-slate-300">☰</button>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobileMenu" class="hidden md:hidden border-t border-slate-800 bg-slate-900/95">
+      <div class="max-w-6xl mx-auto px-6 py-3 flex flex-col gap-2">
+        <a href="#projects" class="py-2">Projects</a>
+        <a href="#skills" class="py-2">Skills</a>
+        <a href="#certificates" class="py-2">Certificates</a>
+        <a href="#contact" class="py-2">Contact</a>
+        <a href="/resume.pdf" class="py-2">Resume</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 py-12">
+    <!-- HERO -->
+    <section id="home" class="grid gap-8 md:grid-cols-2 items-center">
+      <div>
+        <h1 class="text-4xl sm:text-5xl font-extrabold">Hi, I'm <span class="glow-gradient">Sudhanshu Gandhi</span></h1>
+        <p class="mt-4 text-slate-300 text-lg">I build production-ready Machine Learning and NLP systems — from data cleaning and models to web deployment. I focus on real-time detection systems, NLP pipelines, and clean developer-first UIs.</p>
+
+        <div class="mt-6 flex gap-3">
+          <a href="#projects" class="inline-flex items-center gap-2 bg-indigo-600 hover:bg-indigo-500 px-4 py-2 rounded shadow">View Projects →</a>
+          <a href="#contact" class="inline-flex items-center gap-2 border border-slate-700 px-4 py-2 rounded text-slate-200">Contact Me</a>
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3 text-sm text-slate-400">
+          <div class="bg-slate-800/40 px-4 py-2.5 rounded-lg border border-slate-700/50 hover:bg-slate-800/60 transition-colors flex items-center gap-2">
+            <span>📍</span>
+            <span>Muzaffarpur, Bihar</span>
+          </div>
+          <div class="bg-slate-800/40 px-4 py-2.5 rounded-lg border border-slate-700/50 hover:bg-slate-800/60 transition-colors flex items-center gap-2">
+            <span>📧</span>
+            <a href="mailto:sudhanshugandhi17@gmail.com" class="hover:text-indigo-400 transition-colors break-all">sudhanshugandhi17@gmail.com</a>
+          </div>
+          <div class="bg-slate-800/40 px-4 py-2.5 rounded-lg border border-slate-700/50 hover:bg-slate-800/60 transition-colors flex items-center gap-2">
+            <span>🔗</span>
+            <a class="text-slate-200 hover:text-indigo-400 transition-colors font-medium" href="https://in.linkedin.com/in/sudhanshu-gandhi-95274b244" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div class="bg-slate-800/40 border border-slate-700/50 p-5 rounded-2xl shadow-lg hover:bg-slate-800/60 transition-colors">
+          <div class="flex items-start gap-4">
+            <div class="w-24 h-24 shrink-0 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-400 flex items-center justify-center text-slate-900 font-bold text-3xl shadow-[0_0_20px_rgba(99,102,241,0.4)] transform hover:scale-105 transition-all duration-300">SG</div>
+            <div>
+              <div class="text-sm text-indigo-400 font-medium">MCA (AIML) • Chandigarh University</div>
+              <div class="mt-1.5 font-bold text-xl text-slate-100">AI / ML Student & Developer</div>
+              <div class="mt-2 text-sm text-slate-400 leading-relaxed">I build ML pipelines, deploy web apps, and make reproducible notebooks. Open to internships and full-time roles.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-xl bg-gradient-to-br from-slate-800/80 to-slate-800/40 border border-slate-700/50 shadow-inner hover:border-indigo-500/30 transition-colors">
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Top Skills</div>
+            <div class="mt-2 text-sm font-medium text-slate-300 leading-relaxed">ML Algorithms • Deep Learning • NLP • Flask • Streamlit</div>
+          </div>
+          <div class="p-4 rounded-xl bg-slate-800/40 border border-slate-700/50 hover:border-cyan-500/30 transition-colors">
+            <div class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Notable</div>
+            <div class="mt-2 text-sm font-medium text-slate-300 leading-relaxed">AI Tool for Student Risk and Performance Analysis</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mt-12">
+      <div class="flex items-center justify-between">
+        <h2 class="text-2xl font-bold">Selected Projects</h2>
+        <div class="text-sm text-slate-400">Click a project to see details & demo links</div>
+      </div>
+
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <!-- Card: Phishing -->
+        <article class="group bg-slate-800/40 hover:bg-slate-800/80 p-6 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] transform transition-all duration-300 hover:-translate-y-2 border border-slate-700/50 hover:border-indigo-500/50 hover:shadow-indigo-500/20 relative overflow-hidden" tabindex="0" role="button" onclick="openModal('phishing')">
+          <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-cyan-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10 flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-slate-200 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-indigo-400 group-hover:to-cyan-300 transition-all">Phishing Detection</h3>
+              <p class="mt-2 text-sm text-slate-400 leading-relaxed">ML + NLP system analyzing email text and URL features to instantly classify phishing attempts.</p>
+            </div>
+            <div class="ml-3 text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-700/50 rounded border border-slate-600/30 text-slate-300">Python</div>
+          </div>
+          <div class="relative z-10 mt-5 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 rounded-lg text-xs font-medium">Scikit-learn</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">NLP</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">Flask</span>
+          </div>
+        </article>
+
+        <!-- Card: AI Workspace Pro -->
+        <article class="group bg-slate-800/40 hover:bg-slate-800/80 p-6 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] transform transition-all duration-300 hover:-translate-y-2 border border-slate-700/50 hover:border-cyan-500/50 hover:shadow-cyan-500/20 relative overflow-hidden" tabindex="0" role="button" onclick="openModal('ai_workspace')">
+          <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-blue-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10 flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-slate-200 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-300 transition-all">AI Workspace Pro</h3>
+              <p class="mt-2 text-sm text-slate-400 leading-relaxed">Multi-functional unified platform combining diverse LLM and AI functionalities into a single interface.</p>
+            </div>
+            <div class="ml-3 text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-700/50 rounded border border-slate-600/30 text-slate-300">Python</div>
+          </div>
+          <div class="relative z-10 mt-5 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 rounded-lg text-xs font-medium">LLM</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">Streamlit</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">API</span>
+          </div>
+        </article>
+
+        <!-- Card: Student Risk Analysis -->
+        <article class="group bg-slate-800/40 hover:bg-slate-800/80 p-6 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] transform transition-all duration-300 hover:-translate-y-2 border border-slate-700/50 hover:border-violet-500/50 hover:shadow-violet-500/20 relative overflow-hidden" tabindex="0" role="button" onclick="openModal('student_risk')">
+          <div class="absolute inset-0 bg-gradient-to-br from-violet-500/5 to-fuchsia-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10 flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-slate-200 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-violet-400 group-hover:to-fuchsia-300 transition-all">Student AI Analytics</h3>
+              <p class="mt-2 text-sm text-slate-400 leading-relaxed">Learning intelligence tool analyzing activity data to predict completion risk and highlight difficult chapters.</p>
+            </div>
+            <div class="ml-3 text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-700/50 rounded border border-slate-600/30 text-slate-300">Python</div>
+          </div>
+          <div class="relative z-10 mt-5 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-violet-500/10 text-violet-300 border border-violet-500/20 rounded-lg text-xs font-medium">Data Mining</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">Analytics</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">Pandas</span>
+          </div>
+        </article>
+
+        <!-- Card: Credit Card Dashboard -->
+        <article class="group bg-slate-800/40 hover:bg-slate-800/80 p-6 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] transform transition-all duration-300 hover:-translate-y-2 border border-slate-700/50 hover:border-emerald-500/50 hover:shadow-emerald-500/20 relative overflow-hidden" tabindex="0" role="button" onclick="openModal('credit_card')">
+          <div class="absolute inset-0 bg-gradient-to-br from-emerald-500/5 to-teal-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10 flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-slate-200 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-emerald-400 group-hover:to-teal-300 transition-all">Credit Card Financial Analytics Dashboard</h3>
+              <p class="mt-2 text-sm text-slate-400 leading-relaxed">Comprehensive visualization tool for analyzing credit card transactions and deep-diving into customer behavior.</p>
+            </div>
+            <div class="ml-3 text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-700/50 rounded border border-slate-600/30 text-slate-300">Data</div>
+          </div>
+          <div class="relative z-10 mt-5 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 rounded-lg text-xs font-medium">Tableau</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">SQL</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">EDA</span>
+          </div>
+        </article>
+
+        <!-- Card: ToxiScan -->
+        <article class="group bg-slate-800/40 hover:bg-slate-800/80 p-6 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] transform transition-all duration-300 hover:-translate-y-2 border border-slate-700/50 hover:border-pink-500/50 hover:shadow-pink-500/20 relative overflow-hidden" tabindex="0" role="button" onclick="openModal('toxiscan')">
+          <div class="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-rose-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10 flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-slate-200 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-pink-400 group-hover:to-rose-300 transition-all">ToxiScan Analyzer</h3>
+              <p class="mt-2 text-sm text-slate-400 leading-relaxed">ANN + NLP pipeline predicting toxic comments accurately, integrated into a clean real-time Streamlit UI.</p>
+            </div>
+            <div class="ml-3 text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-700/50 rounded border border-slate-600/30 text-slate-300">AI/ML</div>
+          </div>
+          <div class="relative z-10 mt-5 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-pink-500/10 text-pink-300 border border-pink-500/20 rounded-lg text-xs font-medium">ANN</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">Streamlit</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">NLP</span>
+          </div>
+        </article>
+
+        <!-- Card: Unscrambler -->
+        <article class="group bg-slate-800/40 hover:bg-slate-800/80 p-6 rounded-2xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.3)] transform transition-all duration-300 hover:-translate-y-2 border border-slate-700/50 hover:border-amber-500/50 hover:shadow-amber-500/20 relative overflow-hidden" tabindex="0" role="button" onclick="openModal('unscrambler')">
+          <div class="absolute inset-0 bg-gradient-to-br from-amber-500/5 to-yellow-400/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="relative z-10 flex items-start justify-between">
+            <div>
+              <h3 class="font-bold text-lg text-slate-200 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-amber-400 group-hover:to-yellow-300 transition-all">Word Unscrambler</h3>
+              <p class="mt-2 text-sm text-slate-400 leading-relaxed">Interactive Tkinter game using BFS search optimization for lightning-fast word validation and engaging UX.</p>
+            </div>
+            <div class="ml-3 text-[10px] font-bold uppercase tracking-wider px-2 py-1 bg-slate-700/50 rounded border border-slate-600/30 text-slate-300">Python</div>
+          </div>
+          <div class="relative z-10 mt-5 flex flex-wrap gap-2">
+            <span class="px-2.5 py-1 bg-amber-500/10 text-amber-300 border border-amber-500/20 rounded-lg text-xs font-medium">Tkinter</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">BFS Search</span>
+            <span class="px-2.5 py-1 bg-slate-700/50 text-slate-300 border border-slate-600/50 rounded-lg text-xs font-medium">Algorithms</span>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="mt-6 text-sm text-slate-400">Want code or demo links? Click any card or message me via contact form — I share notebooks, repos & live demos on request.</div>
+    </section>
+
+    <!-- Skills & Certificates -->
+    <section id="skills" class="mt-16 grid gap-6 md:grid-cols-2">
+      <div class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-2xl shadow-lg relative overflow-hidden group">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full blur-3xl -mr-10 -mt-10 transition-all duration-500 group-hover:bg-indigo-500/20"></div>
+        <h3 class="font-bold text-xl text-slate-100 flex items-center gap-2">
+          <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+          Technical Skills
+        </h3>
+        <div class="mt-6 space-y-5 relative z-10">
+          <div>
+            <div class="text-sm font-medium text-slate-300 mb-2">Languages</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-indigo-500/50 hover:text-indigo-300 transition-colors cursor-default">Python</span>
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-indigo-500/50 hover:text-indigo-300 transition-colors cursor-default">C / C++</span>
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-indigo-500/50 hover:text-indigo-300 transition-colors cursor-default">R</span>
+            </div>
+          </div>
+          <div>
+            <div class="text-sm font-medium text-slate-300 mb-2">AI, ML & NLP</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-cyan-500/50 hover:text-cyan-300 transition-colors cursor-default">TensorFlow</span>
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-cyan-500/50 hover:text-cyan-300 transition-colors cursor-default">Scikit-learn</span>
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-cyan-500/50 hover:text-cyan-300 transition-colors cursor-default">ANN</span>
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-cyan-500/50 hover:text-cyan-300 transition-colors cursor-default">TF-IDF</span>
+            </div>
+          </div>
+          <div>
+            <div class="text-sm font-medium text-slate-300 mb-2">Web & Frameworks</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-teal-500/50 hover:text-teal-300 transition-colors cursor-default">Django</span>
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-teal-500/50 hover:text-teal-300 transition-colors cursor-default">Flask</span>
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-teal-500/50 hover:text-teal-300 transition-colors cursor-default">Streamlit</span>
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-teal-500/50 hover:text-teal-300 transition-colors cursor-default">HTML/CSS/JS</span>
+            </div>
+          </div>
+          <div>
+            <div class="text-sm font-medium text-slate-300 mb-2">Data & Tools</div>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-violet-500/50 hover:text-violet-300 transition-colors cursor-default">Pandas & NumPy</span>
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-violet-500/50 hover:text-violet-300 transition-colors cursor-default">SQL</span>
+              <span class="px-3 py-1 bg-slate-900/80 border border-slate-700 text-slate-300 rounded-md text-xs font-medium hover:border-violet-500/50 hover:text-violet-300 transition-colors cursor-default">Matplotlib</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="certificates" class="bg-slate-800/40 border border-slate-700/50 p-6 rounded-2xl shadow-lg relative overflow-hidden group">
+        <div class="absolute top-0 right-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-3xl -mr-10 -mt-10 transition-all duration-500 group-hover:bg-cyan-500/20"></div>
+        <h3 class="font-bold text-xl text-slate-100 flex items-center gap-2">
+          <svg class="w-5 h-5 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path></svg>
+          Certifications
+        </h3>
+        <ul class="mt-6 space-y-4 relative z-10">
+          <li class="flex gap-3 items-start group/item">
+            <div class="mt-0.5 p-1.5 rounded bg-slate-700/50 text-emerald-400 group-hover/item:bg-emerald-500/20 group-hover/item:text-emerald-300 transition-colors">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            </div>
+            <div>
+              <div class="text-sm font-medium text-slate-200">Introduction to AI & ML</div>
+              <div class="text-xs text-slate-400 mt-0.5">Coursera</div>
+            </div>
+          </li>
+          <li class="flex gap-3 items-start group/item">
+            <div class="mt-0.5 p-1.5 rounded bg-slate-700/50 text-emerald-400 group-hover/item:bg-emerald-500/20 group-hover/item:text-emerald-300 transition-colors">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            </div>
+            <div>
+              <div class="text-sm font-medium text-slate-200">AI for Decision Makers</div>
+              <div class="text-xs text-slate-400 mt-0.5">Coursera</div>
+            </div>
+          </li>
+          <li class="flex gap-3 items-start group/item">
+            <div class="mt-0.5 p-1.5 rounded bg-slate-700/50 text-emerald-400 group-hover/item:bg-emerald-500/20 group-hover/item:text-emerald-300 transition-colors">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            </div>
+            <div>
+              <div class="text-sm font-medium text-slate-200">Machine Learning & Emerging Tech...</div>
+              <div class="text-xs text-slate-400 mt-0.5">Coursera</div>
+            </div>
+          </li>
+          <li class="flex gap-3 items-start group/item">
+            <div class="mt-0.5 p-1.5 rounded bg-slate-700/50 text-emerald-400 group-hover/item:bg-emerald-500/20 group-hover/item:text-emerald-300 transition-colors">
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+            </div>
+            <div>
+              <div class="text-sm font-medium text-slate-200">Generative AI for SWE</div>
+              <div class="text-xs text-slate-400 mt-0.5">IBM</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mt-16 bg-slate-800/40 border border-slate-700/50 p-8 rounded-2xl shadow-lg relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-64 h-64 bg-indigo-500/5 rounded-full blur-3xl -ml-20 -mt-20"></div>
+      <div class="relative z-10">
+        <h3 class="font-bold text-2xl">Let's Connect</h3>
+        <p class="text-slate-400 mt-2">Have a question or want to work together? Drop me a message below.</p>
+
+        <!-- Formspree form: replace the action URL with your Formspree form endpoint -->
+        <form class="mt-6 grid gap-4 sm:grid-cols-2" id="contactForm" action="https://formspree.io/f/yourFormID" method="POST">
+          <div class="space-y-1">
+            <label class="text-xs font-medium text-slate-400 ml-1">Name</label>
+            <input required name="name" placeholder="John Doe" class="w-full p-3 rounded-lg bg-slate-900/80 border border-slate-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all text-slate-200 placeholder:text-slate-600" />
+          </div>
+          <div class="space-y-1">
+            <label class="text-xs font-medium text-slate-400 ml-1">Email</label>
+            <input required name="email" type="email" placeholder="john@example.com" class="w-full p-3 rounded-lg bg-slate-900/80 border border-slate-700 focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 outline-none transition-all text-slate-200 placeholder:text-slate-600" />
+          </div>
+          <div class="space-y-1 sm:col-span-2">
+            <label class="text-xs font-medium text-slate-400 ml-1">Message</label>
+            <textarea required name="message" rows="4" placeholder="How can I help you?" class="w-full p-3 rounded-lg bg-slate-900/80 border border-slate-700 focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 outline-none transition-all text-slate-200 placeholder:text-slate-600 resize-y"></textarea>
+          </div>
+          <button type="submit" class="sm:col-span-2 bg-gradient-to-r from-indigo-600 to-cyan-600 hover:from-indigo-500 hover:to-cyan-500 text-white font-medium px-6 py-3 rounded-lg shadow-lg shadow-indigo-500/25 transform hover:-translate-y-0.5 transition-all duration-200 flex justify-center items-center gap-2">
+            <span>Send Message</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </form>
+
+        <div class="mt-6 flex flex-col sm:flex-row items-center gap-4 text-sm text-slate-400 justify-center border-t border-slate-700/50 pt-6">
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-slate-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <a href="mailto:sudhanshugandhi17@gmail.com" class="hover:text-indigo-400 transition-colors">sudhanshugandhi17@gmail.com</a>
+          </div>
+          <span class="hidden sm:inline text-slate-600">•</span>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-slate-500" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            <a href="https://in.linkedin.com/in/sudhanshu-gandhi-95274b244" target="_blank" rel="noopener" class="hover:text-indigo-400 transition-colors">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="mt-12 text-center text-sm text-slate-500 pb-12">©Built By-Sudhanshu Gandhi • Last updated: 2025</footer>
+  </main>
+
+  <!-- Modal templates -->
+  <div id="modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center p-4" aria-hidden="true">
+    <div id="modalCard" class="max-w-3xl w-full bg-slate-900 rounded-xl p-6 shadow-lg">
+      <div class="flex justify-between items-start">
+        <h3 id="modalTitle" class="text-xl font-semibold">Project Title</h3>
+        <button onclick="closeModal()" aria-label="Close modal" class="text-slate-400">✕</button>
+      </div>
+      <p id="modalDesc" class="mt-3 text-slate-300"></p>
+      <div id="modalLinks" class="mt-4 flex gap-3"></div>
+    </div>
+  </div>
+
+  <script>
+    // Mobile nav toggle
+    const mobileBtn = document.getElementById('mobileBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileBtn.addEventListener('click', ()=>{
+      const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+      mobileBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Modal content
+    const projectData = {
+      phishing: {
+        title: 'Real-Time Phishing Email Detection System',
+        desc: 'Developed a real-time phishing email detection system that analyzes email text and URL features using Machine Learning and NLP. Integrated the trained model into a Flask-based web interface to instantly classify emails as phishing or legitimate.',
+        links: [{label:'Repo',url:'https://github.com/sgandhi17/Phishing-Email-Detaction'}]
+      },
+      ai_workspace: {
+        title: 'AI Workspace Pro',
+        desc: '"AI Workspace Pro: A Multi-Functional AI-Based Web Application" aims to develop a unified platform that combines multiple AI functionalities into a single interface. The system integrates advanced LLM models dynamically, streamlining various tasks efficiently.',
+        links: [{label:'Repo',url:'https://github.com/sgandhi17/AI-Workspace-Pro-'}]
+      },
+      student_risk: {
+        title: 'AI Tool for Student Risk & Performance Analysis',
+        desc: 'This project develops an AI-based Learning Intelligence Tool that analyzes student learning activity data to predict course completion risk and identify difficult learning chapters. The platform transforms raw logs into actionable intervention strategies.',
+        links: [{label:'Repo',url:'https://github.com/sgandhi17/AI-Tool-for-Student-Risk-and-Performance-Analysis'}]
+      },
+      credit_card: {
+        title: 'Credit Card Financial Analytics Dashboard',
+        desc: 'The primary purpose of this project is to perform a comprehensive analysis of credit card transactions and customer behavior using a structured dataset. It enables financial stakeholders to unlock insights regarding spending patterns, fraud potentials, and demographic trends.',
+        links: [{label:'Repo',url:'https://github.com/sgandhi17/Credit-Card-Financial-Analytics-Dashboard'}]
+      },
+      toxiscan: {
+        title: 'Comment Analysis (ANN + NLP + Streamlit)',
+        desc: 'Developed ToxiScan, a text-toxicity detection system using NLP preprocessing and an ANN model for accurate toxic comment classification. Integrated the model into a Streamlit app for real-time toxicity analysis with a clean and interactive interface.',
+        links: [{label:'Repo',url:'https://github.com/sgandhi17/NLP-Mini_project'}]
+      },
+      unscrambler: {
+        title: 'Word Unscrambler Game (Tkinter + Dictionary + BFS)',
+        desc: 'Created a Tkinter-based word unscrambler game using an optimized BFS search algorithm for fast and accurate word validation. Added scoring, hint system, restart option, and a 200+ word anagram dictionary for engaging user experience.',
+        links: [{label:'Repo',url:'https://github.com/sgandhi17/AI-Mini-Project'}]
+      }
+    };
+
+    function openModal(key){
+      const data = projectData[key];
+      if(!data) return;
+      document.getElementById('modalTitle').innerText = data.title;
+      document.getElementById('modalDesc').innerText = data.desc;
+      const links = document.getElementById('modalLinks');
+      links.innerHTML = '';
+      data.links.forEach(l=>{
+        const a = document.createElement('a');
+        a.href = l.url; a.innerText = l.label; a.className = 'px-3 py-2 bg-indigo-600 rounded'; a.target = '_blank'; a.rel='noopener';
+        links.appendChild(a);
+      });
+      const modal = document.getElementById('modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      modal.setAttribute('aria-hidden','false');
+    }
+    function closeModal(){
+      const modal = document.getElementById('modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      modal.setAttribute('aria-hidden','true');
+    }
+
+    // Close modal on ESC or click outside
+    document.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeModal(); });
+    document.getElementById('modal').addEventListener('click', (e)=>{ if(e.target.id==='modal') closeModal(); });
+
+    // Smooth in-page links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        const href = this.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
